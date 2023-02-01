@@ -6,4 +6,8 @@
     .btn-main {
         @apply py-2.5 flex-1  px-5 text-sm font-medium text-gray-900 focus:outline-none  bg-white rounded-lg border focus:ring-blue-500  focus:z-10 focus:border-blue-500 focus:ring-0 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700
     }
+    
+    .btn-disabled {
+        @apply pointer-events-none bg-gray-100 text-slate-500 border-0
+    }
 }
