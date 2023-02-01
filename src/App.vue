@@ -134,7 +134,7 @@
       <div class="-mx-1 flex mt-2">
         <button type="button" class="btn-main mx-1">
           {{
-            store.data.length || computeRemainTodo.length
+            !store.data.length || computeRemainTodo.length
               ? "Check All"
               : "Unchecked All"
           }}
