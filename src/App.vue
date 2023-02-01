@@ -156,7 +156,6 @@ import { computed, onMounted, reactive, ref, watch } from "vue";
 
 const store = reactive({ data: [] });
 const status = ref(null);
-status.value = null;
 
 onMounted(() => {
   store.data = JSON.parse(localStorage.getItem("todo")) || [];
@@ -184,8 +183,8 @@ const handleDelete = (id) => {
   store.data = store.data.filter((todo) => todo.id !== id);
 };
 
-watch(store.data, (newData) => {
-  localStorage.setItem("todo", JSON.stringify(newData));
+watch(store, () => {
+  localStorage.setItem("todo", JSON.stringify(store.data));
 });
 </script>
 
